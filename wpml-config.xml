@@ -1,0 +1,34 @@
+<wpml-config>
+    <admin-texts>
+        <key name="_fp_donation_caption"/>
+        <key name="_fp_donar_details_heading"/>
+        <key name="_fp_donar_details_sno"/>
+        <key name="_fp_donar_details_name"/>
+        <key name="_fp_donar_details_email"/>
+        <key name="_fp_donar_details_amount"/>
+        <key name="_fp_donar_details_status"/>
+        <key name="_fp_donation_free_products_caption"/>
+        <key name="_fp_donation_amount_range_label"/>
+        <key name="_fp_donation_rewards_free_product_caption"/>
+        <key name="_fp_donation_rewards_free_product_worth"/>
+        <key name="_fp_donation_success_message"/>
+        <key name="_fp_donation_minimum_error_message"/>
+        <key name="_fp_donation_maximum_error_message"/>
+        <key name="_fp_donation_empty_error_message"/>
+        <key name="_fp_donation_form_title_product"/>
+        <key name="_fp_donation_form_description_product"/>
+        <key name="_fp_donation_form_simple_label_product"/>
+        <key name="_fp_donation_form_title_cart"/>
+        <key name="_fp_donation_form_description_cart"/>
+        <key name="_fp_donation_form_simple_label_cart"/>
+        <key name="_fp_donation_form_title_checkout"/>
+        <key name="_fp_donation_form_description_checkout"/>
+        <key name="_fp_donation_form_simple_label_checkout"/>
+        <key name="_fp_donation_form_title_shortcode"/>
+        <key name="_fp_donation_form_description_shortcode"/>
+        <key name="_fp_donation_form_simple_label_shortcode"/>
+        <key name="_fp_donation_form_title_flybox"/>
+        <key name="_fp_donation_form_description_flybox"/>
+        <key name="_fp_donation_form_simple_label_flybox"/>
+    </admin-texts>
+</wpml-config>

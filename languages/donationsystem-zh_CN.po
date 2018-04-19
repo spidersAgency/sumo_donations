@@ -1,0 +1,751 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Donation System\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-21 17:57+0530\n"
+"PO-Revision-Date: 2015-07-21 18:01+0530\n"
+"Last-Translator: FantasticPlugins <contact@fantasticplugins.com>\n"
+"Language-Team: FantasticPlugins <support@fantasticplugins.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;__(;_e(\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: php\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+"X-Poedit-SearchPath-2: ../inc\n"
+
+#: ../inc/class_donation_common_function.php:56
+#: ../inc/backup/class_donationsystem_backup.php:147
+#: ../inc/backup/class_donationsystem_backup.php:271
+#: ../inc/admin/tab/class_donation_rewards_tab_old.php:148
+#: ../inc/admin/tab/class_donation_rewards_tab_old.php:193
+#: ../inc/admin/tab/class_donation_rewards_tab_old.php:233
+msgid "Search for a product&hellip;"
+msgstr ""
+
+#: ../inc/class_donation_rewards_at_cart.php:34
+msgid "<h3>"
+msgstr ""
+
+#: ../inc/backup/class_donationsystem_backup.php:24
+#: ../inc/admin/tab/class_donation_rewards_tab_old.php:22
+msgid "Donation Rewards"
+msgstr ""
+
+#: ../inc/backup/class_donationsystem_backup.php:34
+#: ../inc/admin/tab/class_donation_rewards_tab_old.php:32
+msgid "Donation Rewards Settings"
+msgstr ""
+
+#: ../inc/backup/class_donationsystem_backup.php:95
+#: ../inc/backup/class_donationsystem_backup.php:112
+#: ../inc/admin/tab/class_donation_rewards_tab_old.php:94
+#: ../inc/admin/tab/class_donation_rewards_tab_old.php:111
+msgid "Minimum Donation"
+msgstr ""
+
+#: ../inc/backup/class_donationsystem_backup.php:96
+#: ../inc/backup/class_donationsystem_backup.php:113
+#: ../inc/admin/tab/class_donation_rewards_tab_old.php:95
+#: ../inc/admin/tab/class_donation_rewards_tab_old.php:112
+msgid "Maximum Donation"
+msgstr ""
+
+#: ../inc/backup/class_donationsystem_backup.php:97
+#: ../inc/backup/class_donationsystem_backup.php:114
+#: ../inc/admin/tab/class_donation_rewards_tab_old.php:96
+#: ../inc/admin/tab/class_donation_rewards_tab_old.php:113
+msgid "Rewards Type"
+msgstr ""
+
+#: ../inc/backup/class_donationsystem_backup.php:98
+#: ../inc/backup/class_donationsystem_backup.php:115
+#: ../inc/admin/tab/class_donation_rewards_tab_old.php:97
+#: ../inc/admin/tab/class_donation_rewards_tab_old.php:114
+msgid "Product Selection"
+msgstr ""
+
+#: ../inc/backup/class_donationsystem_backup.php:99
+#: ../inc/backup/class_donationsystem_backup.php:192
+#: ../inc/backup/class_donationsystem_backup.php:274
+#: ../inc/admin/tab/class_donation_rewards_tab_old.php:98
+msgid "Remove Linking"
+msgstr ""
+
+#: ../inc/backup/class_donationsystem_backup.php:109
+#: ../inc/admin/tab/class_donation_rewards_tab_old.php:108
+msgid "Add Rewards"
+msgstr ""
+
+#: ../inc/backup/class_donationsystem_backup.php:116
+#: ../inc/admin/tab/class_donation_rewards_tab_old.php:115
+msgid "Add Linking"
+msgstr ""
+
+#: ../inc/backup/class_donationsystem_backup.php:136
+#: ../inc/backup/class_donationsystem_backup.php:266
+#: ../inc/admin/tab/class_donation_rewards_tab_old.php:137
+#: ../inc/admin/tab/class_donation_rewards_tab_old.php:227
+msgid "Free Product"
+msgstr ""
+
+#: ../inc/backup/class_donationsystem_backup.php:137
+#: ../inc/admin/tab/class_donation_rewards_tab_old.php:138
+#: ../inc/admin/tab/class_donation_rewards_tab_old.php:228
+msgid "Coupon Code"
+msgstr ""
+
+#: ../inc/admin/class_wp_list_table_donationtable.php:71
+msgid "S.No"
+msgstr ""
+
+#: ../inc/admin/class_wp_list_table_donationtable.php:72
+msgid "Donar Name"
+msgstr ""
+
+#: ../inc/admin/class_wp_list_table_donationtable.php:73
+msgid "Donar Email"
+msgstr ""
+
+#: ../inc/admin/class_wp_list_table_donationtable.php:74
+msgid "Donated Amount"
+msgstr ""
+
+#: ../inc/admin/class_wp_list_table_donationtable.php:75
+msgid "Payment Status"
+msgstr ""
+
+#: ../inc/admin/class_wp_list_table_donationtable.php:76
+msgid "Date"
+msgstr ""
+
+#: ../inc/admin/class_wp_list_table_donationtable.php:143
+msgid "Delete"
+msgstr ""
+
+#: ../inc/admin/class_wp_list_table_donationtable.php:158
+msgid " rows deleted successfully"
+msgstr ""
+
+#: ../inc/admin/class_admin_menu_tab.php:31
+msgid "SUMO Donations"
+msgstr ""
+
+#: ../inc/admin/class_admin_menu_tab.php:43
+msgid "Action failed. Please refresh the page and retry."
+msgstr ""
+
+#: ../inc/admin/class_admin_menu_tab.php:93
+msgid "Your settings have been saved."
+msgstr ""
+
+#: ../inc/admin/class_admin_menu_tab.php:125
+msgid "Save Changes"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:20
+msgid "Fly Box"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:30
+msgid "Fly Box Settings"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:35
+msgid "Show Fly Box"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:45
+msgid "Title of Donation Form"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:55
+msgid "Description for Donation Form"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:65
+msgid "Show Donation Rewards Table"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:75
+msgid "Donation Field Type"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:84
+msgid "Editable Text Field"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:85
+msgid "Non-Editable Text Field"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:86
+msgid "Predefined Buttons"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:87
+msgid "List Box"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:91
+msgid "Default Donation Value"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:92
+msgid "Enter the Default Donation Value"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:103
+msgid "Minimum Donation Value"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:104
+msgid "Enter Minimum Donation Value"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:115
+msgid "Maximum Donation Value"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:116
+msgid "Enter Maximum Donation Value"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:127
+msgid "Label for Simple Form"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:137
+msgid "Donation Value Separated by commas(,)"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:150
+msgid "Button Background Color"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:160
+msgid "Button Hover color"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:170
+msgid "Button Selected Color"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:180
+msgid "Button Text Color"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:190
+msgid "Custom CSS for Donation Form in Fly Box"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:206
+msgid "Fly Box Customization"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:211
+msgid "Position of Fly Box"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:219
+msgid "Left Side"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:220
+msgid "Right Side"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:225
+msgid "Show Fly Box in Percentage of Scroll in %"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:227
+msgid "Enter the Scroll Percentage in order to show Fly Box (don't enter %  in text field)"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:238
+msgid "Display Fly Box in Cart Page"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:248
+msgid "Display Fly Box in Checkout Page"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:258
+msgid "Background Color for Fly Box"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:268
+msgid "Border Color for Fly Box"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:278
+msgid "Fly Box Heading Text Color"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:288
+msgid "Fly Box Description Text Color"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:299
+msgid "Fly Box Cookies Settings"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:304
+msgid "Enable Cookies for Fly Box"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:313
+msgid "Fly Box Click to Close for X Days"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:318
+msgid "After click close button in Fly Box, Show Fly Box again after X Days"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:324
+msgid "Advanced Settings"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:329
+msgid "Hide Fly Box in following screensize"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_flybox_tab.php:334
+msgid "Enter the Screen Size something like 320x240,380x420 with comma separated values"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_table_tab.php:22
+#: ../inc/admin/tab/class_donation_table_tab.php:32
+msgid "Donation Table"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_table_tab.php:38
+msgid "[fp_donation_table]"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_table_tab.php:40
+msgid "Use this Shortcode in any Post/Page to display Donation Table"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_messages_tab.php:20
+msgid "Messages"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_messages_tab.php:30
+msgid "Message Settings"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_messages_tab.php:35
+msgid "Donation Added Successfully Message"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_messages_tab.php:36
+msgid "Enter the Message which will be displayed after Donation is made"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_messages_tab.php:47
+msgid "Minimum Donation Error Message"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_messages_tab.php:48
+msgid "Enter the Minimum Donation Error Message"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_messages_tab.php:59
+msgid "Maximum Donation Error Message"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_messages_tab.php:60
+msgid "Enter the Maximum Donation Error Message"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_messages_tab.php:71
+msgid "Empty Donation Error Message"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_messages_tab.php:72
+msgid "Enter the Donation Error Message"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:20
+msgid "Labels"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:30
+msgid "Donation Form Settings"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:35
+msgid "Donation Button Caption"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:36
+msgid "Enter Donation Button Caption in Single Product Page/Cart Page/ Checkout Page"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:51
+msgid "Donation Table Settings"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:56
+msgid "Donation Table Heading"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:57
+msgid "Enter the Caption which is heading for Donation Table"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:68
+msgid "Customize S.No in Donation Table"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:69
+msgid "Customize the S.No in Donation Table"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:80
+msgid "Customize Name in Donation Table"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:81
+msgid "Customize the Donar Name in Donar Details Table"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:92
+msgid "Customize Donar Email in Table"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:93
+msgid "Customize the Donar Email in Donar Details Table"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:104
+#: ../inc/admin/tab/class_donation_labels_tab.php:105
+msgid "Customize Donated Amount in Table"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:116
+msgid "Customize the Status in Table"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:117
+msgid "Customize Status of Donated Amount in Table"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:132
+msgid "Free Product Customization"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:137
+msgid "List of Free Products Caption in Cart Page"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:138
+msgid "Customize the List of Free Products Caption in Cart Page"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:150
+msgid "Donation Rewards Table Customization"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:155
+msgid "Donation Amount Range Label Customization"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:156
+msgid "Customize the Donation Amount Range Label"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:167
+msgid "List of Free Products Label Customization"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:168
+msgid "Customize the List of Free Products Caption"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:179
+msgid "Free Product Worth Label Customization"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_labels_tab.php:180
+msgid "Customize the Free Product Worth Label"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:35
+msgid "Donation Form"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:45
+msgid "Donation Form Product Settings"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:50
+msgid "Show Donation Form in Product Page"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:206
+msgid "Show Donation Form in"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:215
+msgid "All Products"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:216
+msgid "Include Selected Products"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:217
+msgid "Exclude Selected Products"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:227
+msgid "Custom CSS for Donation Form in Product Page"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:240
+msgid "Donation Form Cart Settings"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:245
+msgid "Show Donation Form in Cart Page"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:400
+msgid "Custom CSS for Donation Form in Cart Page"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:413
+msgid "Donation Form Checkout Settings"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:418
+msgid "Show Donation Form in Checkout Page"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:574
+msgid "Custom CSS for Donation Form in Checkout Page"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:587
+msgid "Donation Form Shortcode Settings"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:593
+msgid "Show Donation Form in Shortcode"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:752
+msgid "Donation Form Background Color"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:762
+msgid "Custom CSS for Donation Form in Shortcode"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:847
+msgid "Donation Value in Predefined Buttons"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:867
+msgid "Enter Number of Columns for to display Predefined Buttons(Frontend)"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:882
+msgid "Included Selected Products"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_form_tab.php:899
+msgid "Excluded Selected Products"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_rewards_tab.php:36
+msgid "Donation Reward Rules"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_rewards_tab.php:42
+#: ../inc/admin/tab/class_donation_shortcode_tab.php:49
+msgid "[fp_donation_rewards_table]"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_rewards_tab.php:44
+#: ../inc/admin/tab/class_donation_shortcode_tab.php:51
+msgid "Use this Shortcode in any Post/Page to display Donation Rewards Table"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_rewards_tab.php:48
+msgid "Donation Rewards Table Title"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_rewards_tab.php:58
+msgid "Rule Priority"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_rewards_tab.php:67
+msgid "First Matched Rule"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_rewards_tab.php:68
+msgid "Last Matched Rule"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_rewards_tab.php:69
+msgid "Minimum Reward"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_rewards_tab.php:70
+msgid "Maximum Reward"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_rewards_tab.php:74
+msgid "Add Donation Rewards Type"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_rewards_tab.php:83
+msgid "Automatically Add Free Products to Cart"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_rewards_tab.php:84
+msgid "List Free Products in Cart for user to choose"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_rewards_tab.php:142
+msgid "Reward Type"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_rewards_tab.php:143
+msgid "Select Free Products"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_rewards_tab.php:144
+#: ../inc/admin/tab/class_donation_rewards_tab.php:190
+#: ../inc/admin/tab/class_donation_rewards_tab.php:308
+msgid "Delete Rule"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_rewards_tab.php:154
+msgid "Add Rule"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_rewards_tab.php:175
+#: ../inc/admin/tab/class_donation_rewards_tab.php:299
+msgid "Free Products"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_rewards_tab.php:176
+#: ../inc/admin/tab/class_donation_rewards_tab.php:300
+msgid "Cart Discount"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_general_tab.php:30
+msgid "General"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_general_tab.php:38
+msgid "Donation Product Settings"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_general_tab.php:43
+msgid "Donation Product Setup"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_general_tab.php:44
+msgid "Choose Donation Product from Existing/New"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_general_tab.php:53
+msgid "Existing Product"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_general_tab.php:54
+#: ../inc/admin/tab/class_donation_general_tab.php:71
+msgid "Create New Product"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_general_tab.php:59
+msgid "Title for New Donation Product"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_general_tab.php:60
+msgid "Enter Title for New Donation Product"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_general_tab.php:75
+msgid "Choose Existing Product for Donation"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_general_tab.php:107
+msgid "Donation Table Shortcode Settings"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_general_tab.php:112
+msgid "Show Donation Table using Shortcode"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_general_tab.php:126
+msgid "Show S.No Column from Donation Table"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_general_tab.php:137
+msgid "Show Donar Name Column from Donation Table"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_general_tab.php:148
+msgid "Show Donar Email Column from Donation Table"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_general_tab.php:159
+msgid "Show Donated Amount Column from Donation Table"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_general_tab.php:170
+msgid "Show Status Column from Donation Table"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_general_tab.php:198
+#: ../inc/admin/tab/class_donation_shortcode_tab.php:39
+msgid "Use this Shortcode in any Post/Page to display Donation Form"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_general_tab.php:220
+msgid "Create New Donation Product"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_general_tab.php:238
+msgid "Product that should be used for Donation (Product should be non-taxable and non-shippable)"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_shortcode_tab.php:22
+msgid "Shortcodes"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_shortcode_tab.php:32
+msgid "List of Shortcodes"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_shortcode_tab.php:37
+msgid "[fp_donation_form]"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_reset_tab.php:24
+#: ../inc/admin/tab/class_donation_reset_tab.php:92
+msgid "Reset"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_reset_tab.php:34
+msgid "Reset Settings"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_reset_tab.php:42
+msgid "Reset Donation Table"
+msgstr ""
+
+#: ../inc/admin/tab/class_donation_reset_tab.php:53
+msgid "Reset Plugin Settings"
+msgstr ""
+
