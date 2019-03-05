@@ -87,36 +87,69 @@ class FP_Donation_Product_Function {
     public static function get_entire_details_about_donar() {
 // List of Orderids
         global $post, $woocommerce;
+        ?>
+        <script type="text/javascript">
+            jQuery(document).ready(function () {
+                jQuery('.donationtable').footable();
+                jQuery('#pagination_size').val(5);
+                jQuery('#pagination_size').on('change', function () {
+                    jQuery('.donationtable').data('page-size', this.value);
+                    jQuery('.donationtable').trigger('footable_initialized');
+                });
+            });
+        </script>
+        <?php
         ob_start();
         $get_orderids = self::get_donated_order_ids();
         if (get_option('_fp_donation_display_table') == 'yes') {
             if ($get_orderids) {
                 ?>
+
                 <h3><?php echo get_option('_fp_donar_details_heading'); ?></h3>
-                <table class="form-fields">
+
+                <select id='pagination_size'>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+                <table class="donationtable examples">
                     <thead>
                         <tr>
-                                <?php if (get_option('_fp_hide_donation_table_sno') == 'yes') { ?>
-                                <th>
-                                <?php echo get_option('_fp_donar_details_sno'); ?>
+                            <?php if (get_option('_fp_hide_donation_table_sno') == 'yes') { ?>
+                                <th data-toggle="true" data-sort-initial ="true" >
+                                    <?php echo get_option('_fp_donar_details_sno'); ?>
                                 </th>
-                                <?php } if (get_option('_fp_hide_donation_table_name') == 'yes') { ?>
+                            <?php } if (get_option('_fp_hide_donation_table_name') == 'yes') { ?>
                                 <th>
-                                <?php echo get_option('_fp_donar_details_name'); ?>
+                                    <?php echo get_option('_fp_donar_details_name'); ?>
                                 </th>
-                                <?php } if (get_option('_fp_hide_donation_table_email') == 'yes') { ?>
+                            <?php } if (get_option('_fp_hide_donation_table_email') == 'yes') { ?>
                                 <th>
-                                <?php echo get_option('_fp_donar_details_email'); ?>
+                                    <?php echo get_option('_fp_donar_details_email'); ?>
                                 </th>
-                                <?php } if (get_option('_fp_hide_donation_table_amount') == 'yes') { ?>
+                            <?php } if (get_option('_fp_hide_donation_table_amount') == 'yes') { ?>
                                 <th>
-                                <?php echo get_option('_fp_donar_details_amount'); ?>
+                                    <?php echo get_option('_fp_donar_details_amount'); ?>
                                 </th>
-                                <?php } if (get_option('_fp_hide_donation_table_status') == 'yes') { ?>
+                            <?php } if (get_option('_fp_hide_donation_table_memorable') == 'yes') { ?>
+                                <th data-hide="phone,tablet">
+                                    <?php echo get_option('_fp_donar_details_memorable'); ?>
+                                </th >
+                            <?php } if (get_option('_fp_hide_donation_table_honorable') == 'yes') { ?>
+                                <th data-hide="phone,tablet">
+                                    <?php echo get_option('_fp_donar_details_Honorable'); ?>
+                                </th>
+                            <?php } if (get_option('_fp_hide_donation_table_reason') == 'yes') { ?>
+                                <th data-hide="phone,tablet">
+                                    <?php echo get_option('_fp_donar_details_reason'); ?>
+                                </th>
+
+                            <?php } if (get_option('_fp_hide_donation_table_status') == 'yes') { ?>
                                 <th>
-                                <?php echo get_option('_fp_donar_details_status'); ?>
+                                    <?php echo get_option('_fp_donar_details_status'); ?>
                                 </th>
-                <?php } ?>
+                            <?php } ?>
                         </tr>
                     </thead>
                     <tbody>
@@ -125,32 +158,48 @@ class FP_Donation_Product_Function {
                             $i = 1;
                             foreach ($get_orderids as $each_order) {
                                 $order = new WC_Order($each_order);
+                                $reason_type = get_post_meta($each_order, 'fp_donation_reason_type', true);
+                                $donate_for_person = get_post_meta($each_order, 'fp_donation_person', true);
+                                $donation_reason = get_post_meta($each_order, 'fp_donation_reason_to_donate', true);
                                 ?>
                                 <tr>
-                                        <?php if (get_option('_fp_hide_donation_table_sno') == 'yes') { ?>
-                                        <td>
-                                        <?php echo $i; ?>
+                                    <?php if (get_option('_fp_hide_donation_table_sno') == 'yes') { ?>
+                                        <td data-value="<?php echo $i; ?>">
+                                            <?php echo $i; ?>
                                         </td>
-                                        <?php } if (get_option('_fp_hide_donation_table_name') == 'yes') { ?>
+                                    <?php } if (get_option('_fp_hide_donation_table_name') == 'yes') { ?>
                                         <td>
-                                        <?php echo sumo_donation_get_order_billing_first_name($order) . " " . sumo_donation_get_order_billing_last_name($order); ?>
+                                            <?php echo sumo_donation_get_order_billing_first_name($order) . " " . sumo_donation_get_order_billing_last_name($order); ?>
                                         </td>
-                                        <?php } if (get_option('_fp_hide_donation_table_email') == 'yes') { ?>
+                                    <?php } if (get_option('_fp_hide_donation_table_email') == 'yes') { ?>
                                         <td>
-                                        <?php echo sumo_donation_get_order_billing_email($order); ?>
+                                            <?php echo sumo_donation_get_order_billing_email($order); ?>
                                         </td>
-                                        <?php } if (get_option('_fp_hide_donation_table_amount') == 'yes') { ?>
+                                    <?php } if (get_option('_fp_hide_donation_table_amount') == 'yes') { ?>
                                         <td>
                                             <?php
                                             $donatedamount = get_post_meta($each_order, 'fp_donation_value', true);
                                             echo FP_DonationSystem_Main_Function::format_price($donatedamount);
                                             ?>
                                         </td>
-                                        <?php } if (get_option('_fp_hide_donation_table_status') == 'yes') { ?>
+                                    <?php } if (get_option('_fp_hide_donation_table_memorable') == 'yes') { ?>
                                         <td>
-                                        <?php echo sumo_donation_get_order_status($order); ?>
+                                            <?php echo ($reason_type == 'memorable') ? $donate_for_person : '-'; ?>
                                         </td>
-                                <?php } ?>
+                                    <?php } if (get_option('_fp_hide_donation_table_honorable') == 'yes') { ?>
+                                        <td>
+                                            <?php echo ($reason_type == 'Honorable') ? $donate_for_person : '-'; ?>
+                                        </td>
+                                    <?php } if (get_option('_fp_hide_donation_table_reason') == 'yes') { ?>
+                                        <td>
+                                            <?php echo $donation_reason ? $donation_reason : '-'; ?>
+                                        </td>
+
+                                    <?php } if (get_option('_fp_hide_donation_table_status') == 'yes') { ?>
+                                        <td>
+                                            <?php echo sumo_donation_get_order_status($order); ?>
+                                        </td>
+                                    <?php } ?>
                                 </tr>
                                 <?php
                                 $i++;
@@ -159,8 +208,15 @@ class FP_Donation_Product_Function {
                         ?>
 
                     </tbody>
-
+                    <tfoot>
+                        <tr style="clear:both;">
+                            <td colspan="8">
+                                <div class="pagination pagination-centered"></div>
+                            </td>
+                        </tr>
+                    </tfoot>
                 </table>
+
                 <?php
             }
         }
