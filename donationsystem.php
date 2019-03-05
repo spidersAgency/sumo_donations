@@ -4,7 +4,7 @@
  * Plugin Name: SUMO Donations
  * Plugin URI:
  * Description: Complete Donation System for WooCommerce
- * Version: 1.9
+ * Version: 2.3
  * Author: FantasticPlugins
  * Author URI:
  */
@@ -37,8 +37,10 @@ class FP_DonationSystem {
         include('inc/class_donation_rewards_at_cart.php');
         include('inc/class_donation_common_function.php');
         include('inc/class_donation_flybox_function.php');
+        include('inc/gdpr/class-sumo-donations-privacy.php');
 
         add_action('admin_enqueue_scripts', array($this, 'donation_admin_enqueue_script'));
+        add_action('wp_enqueue_scripts', array(__CLASS__, 'donation_frontend_enqueue_script'));
     }
 
     // Check WooCommerce is Active or Not
@@ -104,6 +106,18 @@ class FP_DonationSystem {
 
     public static function donation_admin_enqueue_script() {
         wp_enqueue_script('jscolor', plugins_url('/jscolor/jscolor.js', __FILE__));
+    }
+
+    public static function donation_frontend_enqueue_script() {
+        wp_register_style( 'footable_css', plugins_url('/js/footable.core.css', __FILE__)) ;
+        
+        wp_enqueue_script('footable', plugins_url('/js/footable.js', __FILE__), array('jquery'));
+        wp_enqueue_script('footable_sort', plugins_url('/js/footable.sort.js', __FILE__), array('jquery'));
+        wp_enqueue_script('footable_filter', plugins_url('/js/footable.filter.js', __FILE__), array('jquery'));
+        wp_enqueue_script('footable_initialize', plugins_url('/js/footable_initialize.js', __FILE__), array('jquery'));
+        wp_enqueue_script('footable_paging', plugins_url('/js/footable.paginate.js', __FILE__), array('jquery'));
+        wp_enqueue_style('bootstrap_css', plugins_url('/js/bootstrap.css', __FILE__));
+        wp_enqueue_style('footable_css');
     }
 
 }
