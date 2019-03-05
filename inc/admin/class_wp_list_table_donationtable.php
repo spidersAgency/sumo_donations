@@ -69,15 +69,10 @@ class FP_List_Table_DonationTable extends WP_List_Table {
         $columns = array(
             'cb' => '<input type="checkbox" />', //Render a checkbox instead of text
             'sno' => __('S.No', 'donationsystem'),
-            'donarname' => __('Donar Name', 'donationsystem'),
+            'name' => __('Donar Name', 'donationsystem'),
             'email' => __('Donar Email', 'donationsystem'),
             'amount' => __('Donated Amount', 'donationsystem'),
-            'orderid' => __('Order Id', 'donationsystem'),
-            'memorable' => __('Memorable Name', 'donationsystem'),
-            'honorable' => __('Honorable Name', 'donationsystem'),
-            'reason' => __('Reason For Donation', 'donationsystem'),
             'status' => __('Payment Status', 'donationsystem'),
-            'url' => __('URL', 'donationsystem'),
             'date' => __('Date', 'donationsystem'),
         );
 
@@ -101,46 +96,23 @@ class FP_List_Table_DonationTable extends WP_List_Table {
         $i = 1;
 
         $get_list_orderids = FP_Donation_Product_Function::get_donated_order_ids();
-        ?><style type="text/css">
-            .reason_for{
-                width: auto; 
-                overflow: hidden; 
-                white-space: nowrap;
-                text-overflow: ellipsis; 
-            }
-            div.reason_for:hover{
-                width: auto;
-                overflow: auto;
-                text-overflow: clip;
-                white-space: normal;
-            }
-        </style>
-        <?php
+
+
         if (is_array($get_list_orderids) && (!empty($get_list_orderids))) {
             foreach ($get_list_orderids as $value) {
                 $donatedamount = get_post_meta($value, 'fp_donation_value', true);
-                $reason_type = get_post_meta($value, 'fp_donation_reason_type', true);
-                $donate_for_person = get_post_meta($value, 'fp_donation_person', true) != "" ? get_post_meta($value, 'fp_donation_person', true) : "-";
-                $donation_reason = get_post_meta($value, 'fp_donation_reason_to_donate', true);
-                $donation_url = get_post_meta($value, 'fp_donation_url', true);
-                $page_id = url_to_postid($donation_url);
                 $order = new WC_Order($value);
-                $donated_reason = '<div class="reason_for">' . $donation_reason . '</div>';
 
                 $data[] = array(
                     'sno' => $i,
-                    'donarname' => sumo_donation_get_order_billing_first_name($order) . " " . sumo_donation_get_order_billing_last_name($order),
+                    'name' => sumo_donation_get_order_billing_first_name($order) . " " . sumo_donation_get_order_billing_last_name($order),
                     'email' => sumo_donation_get_order_billing_email($order),
                     'amount' => FP_DonationSystem_Main_Function::format_price($donatedamount),
                     'status' => sumo_donation_get_order_status($order),
-                    'orderid' => '#' . $value,
-                    'memorable' => ($reason_type == 'memorable') ? $donate_for_person : '-',
-                    'honorable' => ($reason_type == 'Honorable') ? $donate_for_person : '-',
-                    'reason' => $donation_reason ? $donated_reason : '-',
-                    'url' => $donation_url ? get_the_title($page_id) . ' ' . $donation_url : '-',
+                    'orderid' => $value,
                     'date' => sumo_donation_get_order_date($order),
                 );
-                $i ++;
+                $i++;
             }
         }
 

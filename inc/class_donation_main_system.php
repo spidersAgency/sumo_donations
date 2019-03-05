@@ -1,4 +1,4 @@
-<?php //
+<?php
 
 class FP_DonationSystem_Main_Function {
 
@@ -315,7 +315,7 @@ class FP_DonationSystem_Main_Function {
                     if ($i % $defaultvalue_column == 0) {
                         echo "</tr><tr>";
                     }
-                    $i ++;
+                    $i++;
                 }
                 ?>
             </table>
@@ -341,28 +341,26 @@ class FP_DonationSystem_Main_Function {
                 echo self::show_donation_rewards_table();
             }
             ?>
-            <table>
-
-                <p class="form-fields fp_donation_form">
-                    <?php
-                    if ((get_option("_fp_donation_form_type_" . $suffix) == '1') || (get_option("_fp_donation_form_type_" . $suffix) == '4')) {
-                        $gettype = get_option('_fp_donation_form_type_' . $suffix);
-                        ?><tr><th><?php echo str_replace('{currency_symbol}', get_woocommerce_currency_symbol(), get_option('_fp_donation_form_simple_label_' . $suffix)) . ' :';
-                        ?></th></tr><tr><td> <input type="number" min="0" <?php echo $gettype == '4' ? 'readonly' : ''; ?> name="fp_donation_amount"  value="<?php echo get_option('_fp_donation_default_value_' . $suffix); ?>" id="fp_donation_amount" class="fp_donation_amount"/></td></tr>
-                        <?php } elseif (get_option('_fp_donation_form_type_' . $suffix) == '3') { ?>
-                    <tr><th> <select name="fp_input_predefined_listbox" class="fp_input_predefined_listbox">
-                                <?php
-                                $listofdonation = get_option('_fp_donation_form_value_listbox_' . $suffix);
-                                if (($listofdonation)) {
-                                    $explode = explode(',', $listofdonation);
-                                    foreach ($explode as $value) {
-                                        ?>
-                                        <option value="<?php echo $value; ?>"><?php echo self::format_price($value); ?></option>
-                                        <?php
-                                    }
-                                }
+            <p class="form-fields fp_donation_form">
+                <?php
+                if ((get_option("_fp_donation_form_type_" . $suffix) == '1') || (get_option("_fp_donation_form_type_" . $suffix) == '4')) {
+                    $gettype = get_option('_fp_donation_form_type_' . $suffix);
+                    echo str_replace('{currency_symbol}', get_woocommerce_currency_symbol(), get_option('_fp_donation_form_simple_label_' . $suffix));
+                    ?><input type="number" min="0" <?php echo $gettype == '4' ? 'readonly' : ''; ?> name="fp_donation_amount"  value="<?php echo get_option('_fp_donation_default_value_' . $suffix); ?>" id="fp_donation_amount" class="fp_donation_amount"/>
+                <?php } elseif (get_option('_fp_donation_form_type_' . $suffix) == '3') { ?>
+                    <select name="fp_input_predefined_listbox" class="fp_input_predefined_listbox">
+                        <?php
+                        $listofdonation = get_option('_fp_donation_form_value_listbox_' . $suffix);
+                        if (($listofdonation)) {
+                            $explode = explode(',', $listofdonation);
+                            foreach ($explode as $value) {
                                 ?>
-                            </select></th></tr>
+                                <option value="<?php echo $value; ?>"><?php echo self::format_price($value); ?></option>
+                                <?php
+                            }
+                        }
+                        ?>
+                    </select>
                     <script type="text/javascript">
                         jQuery(document).ready(function () {
                             var value = jQuery('.fp_input_predefined_listbox').val();
@@ -374,72 +372,32 @@ class FP_DonationSystem_Main_Function {
                     </script>
                     <?php
                     if (get_option('_fp_donation_display_editable_field_' . $suffix) == 'yes') {
-                        ?><tr><th><?php echo str_replace('{currency_symbol}', get_woocommerce_currency_symbol(), get_option('_fp_donation_form_simple_label_' . $suffix)) . ' :';
-                        ?></th></tr><tr><td><input type="number" min="0" name="fp_donation_amount"  value="" id="fp_donation_amount" class="fp_donation_amount_predefined_listbox"/><?php
-                            } else {
-                                ?>
-                                <input type="hidden" name="fp_donation_amount" class="fp_donation_amount_predefined_listbox" value=""/>
-                            </td></tr>
+                        echo str_replace('{currency_symbol}', get_woocommerce_currency_symbol(), get_option('_fp_donation_form_simple_label_' . $suffix));
+                        ?><input type="number" min="0" name="fp_donation_amount"  value="" id="fp_donation_amount" class="fp_donation_amount_predefined_listbox"/><?php
+                    } else {
+                        ?>
+                        <input type="hidden" name="fp_donation_amount" class="fp_donation_amount_predefined_listbox" value=""/>
+
                         <?php
                     }
                 } else {
                     echo self::predefined_buttons_in_donation($suffix);
                     if (get_option('_fp_donation_display_editable_field_' . $suffix) == 'yes') {
-                        ?><tr><th><?php echo str_replace('{currency_symbol}', get_woocommerce_currency_symbol(), get_option('_fp_donation_form_simple_label_' . $suffix)) . ' :';
-                        ?></th></tr><tr><td><input type="number" min="0" name="fp_donation_amount"  value="" id="fp_donation_amount" class="fp_donation_amount_predefined_buttons"/><?php
-                            } else {
-                                ?>
-                                <input type="hidden" name="fp_donation_amount" class="fp_donation_amount_predefined_buttons" value=""/>
-                            </td></tr>
+                        echo str_replace('{currency_symbol}', get_woocommerce_currency_symbol(), get_option('_fp_donation_form_simple_label_' . $suffix));
+                        ?><input type="number" min="0" name="fp_donation_amount"  value="" id="fp_donation_amount" class="fp_donation_amount_predefined_buttons"/><?php
+                    } else {
+                        ?>
+                        <input type="hidden" name="fp_donation_amount" class="fp_donation_amount_predefined_buttons" value=""/>
+
                         <?php
                     }
                 }
-                ?></tr>  <?php if (get_option('_fp_show_donation_reason') == 'yes') { ?>
-                <tr>
-                    <th><?php echo get_option('_fp_donation_form_label_reason_type') . ':'; ?></th>
-                </tr><tr>
-                    <td>
-                        <select name="fp_donation_reason_type" id="fp_donation_reason_type">
-                            <option value="1"><?php _e('Choose an option', 'donationsystem') ?></option>
-                            <option value="memorable"><?php _e('Memorable', 'donationsystem') ?></option>
-                            <option value="Honorable"><?php _e('Honorable', 'donationsystem') ?></option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <th class='fp_reason_for_fields'><?php echo get_option('_fp_donation_form_label_reason') . ':'; ?></th>
-                </tr><tr>
-                    <td class='fp_reason_for_fields'><textarea name="fp_donation_reason_to_donate" maxlength="100"></textarea></td>
-                </tr>
-                <tr>
-                    <th class='fp_reason_for_fields'><?php echo get_option('_fp_donation_form_label_donating_to') . ':'; ?></th>
-                </tr><tr>
-                    <td class='fp_reason_for_fields'><input type="text" name="fp_donation_person" id="fp_donation_person" /></td>
-                </tr>
-            <?php } ?>
-            <tr>
-                <td colspan = "2">
-                    <input type="hidden" name="fp_donation_suffix" class="fp_donation_suffix" value="<?php echo $suffix; ?>"/>
-                    <input type="hidden" name="fp_donation_product" value="<?php echo $get_product_id; ?>"/>
-
-                    <input type="submit" id='fp_donation_submit' name="fp_donation_submit" value="<?php echo get_option('_fp_donation_caption'); ?>" class="button-primary <?php echo get_option('_fp_donation_custom_class_name'); ?>"/></td>
-            </tr>
+                ?>
+                <input type="hidden" name="fp_donation_suffix" class="fp_donation_suffix" value="<?php echo $suffix; ?>"/>
+                <input type="hidden" name="fp_donation_product" value="<?php echo $get_product_id; ?>"/>
+                <input type="submit" id='fp_donation_submit' name="fp_donation_submit" value="<?php echo get_option('_fp_donation_caption'); ?>" class="button-primary <?php echo get_option('_fp_donation_custom_class_name'); ?>"/>
 
             </p>
-            </table>
-            <script type="text/javascript">
-                jQuery(document).ready(function () {
-                    jQuery('.fp_reason_for_fields').hide();
-                    jQuery('#fp_donation_reason_type').change(function () {
-                        var value = jQuery('#fp_donation_reason_type').val();
-                        if (value == '1') {
-                            jQuery('.fp_reason_for_fields').hide();
-                        } else {
-                            jQuery('.fp_reason_for_fields').show();
-                        }
-                    });
-                });
-            </script>
             <?php
         }
         $get_results = ob_get_clean();
@@ -526,8 +484,8 @@ class FP_DonationSystem_Main_Function {
     // wp head hook to initialize post data
     public static function initialize_post_data_after_submit($suffix) {
         ob_start();
-        global $woocommerce, $wp;
-        if (is_cart() || (is_checkout()) || is_product() || is_single() || is_page() || is_shop()) {
+        global $woocommerce;
+        if (is_cart() || (is_checkout()) || is_product() || is_single() || is_page()) {
             $minimum = get_option('_fp_donation_amount_minimum_' . $suffix);
             $maximum = get_option('_fp_donation_amount_maximum_' . $suffix);
 
@@ -535,18 +493,13 @@ class FP_DonationSystem_Main_Function {
             $maximum = $maximum ? $maximum : "0";
             $response = 'false';
             if (isset($_POST['fp_donation_submit'])) {
-                WC()->session->__unset('fp_donation_url');
 
                 $donation_amount = $_POST['fp_donation_amount'];
-                $donation_reason_type = $_POST['fp_donation_reason_type'];
-                $donation_reason = $_POST['fp_donation_reason_to_donate'];
-                $donation_for_person = $_POST['fp_donation_person'];
-                $current_page = home_url($wp->request);
                 $donation_product = $_POST['fp_donation_product'];
 
                 if (($donation_amount == '') || ($donation_amount == '0')) {
                     wc_add_notice(get_option('_fp_donation_empty_error_message'), 'error');
-                    if ((is_page() || is_single() || is_shop()) && !is_product() && (!is_checkout())) {
+                    if ((is_page() || is_single()) && !is_product() && (!is_checkout())) {
                         wp_safe_redirect($woocommerce->cart->get_cart_url());
                         exit;
                     }
@@ -559,7 +512,7 @@ class FP_DonationSystem_Main_Function {
                         $replace_find_min = array(self::format_price($minimum));
                         $minimum_message = str_replace($shortcode_find_min, $replace_find_min, $minimum_error);
                         wc_add_notice($minimum_message, 'error');
-                        if ((is_page() || is_single() || is_shop()) && !is_product() && (!is_checkout())) {
+                        if ((is_page() || is_single()) && !is_product() && (!is_checkout())) {
                             wp_safe_redirect($woocommerce->cart->get_cart_url());
                             exit;
                         }
@@ -571,17 +524,15 @@ class FP_DonationSystem_Main_Function {
                         $replace_find = array(self::format_price($maximum));
                         $maximum_message = str_replace($shortcode_find, $replace_find, $maximum_error);
                         wc_add_notice($maximum_message, 'error');
-                        if ((is_page() || is_single() || is_shop()) && !is_product() && (!is_checkout())) {
+                        if ((is_page() || is_single()) && !is_product() && (!is_checkout())) {
                             wp_safe_redirect($woocommerce->cart->get_cart_url());
                             exit;
                         }
                         return;
                     }
                 }
-                if ($donation_product) {
-                    $generate_cart_item_key = $woocommerce->cart->generate_cart_id($donation_product);
-                    $check_product = $woocommerce->cart->find_product_in_cart($generate_cart_item_key);
-                }
+                $generate_cart_item_key = $woocommerce->cart->generate_cart_id($donation_product);
+                $check_product = $woocommerce->cart->find_product_in_cart($generate_cart_item_key);
                 if (!$check_product) {
                     $response = $woocommerce->cart->add_to_cart($donation_product);
                     $session_currency = class_exists('WCML_Multi_Currency') ? WC()->session->get('client_currency') : get_option('woocommerce_currency');
@@ -592,24 +543,16 @@ class FP_DonationSystem_Main_Function {
                     }
                     if ($response) {
                         wc_add_notice(get_option('_fp_donation_success_message'), 'success');
-                        if ((is_page() || is_single() || is_shop()) && !is_product() && (!is_checkout())) {
+                        if ((is_page() || is_single()) && !is_product() && (!is_checkout())) {
                             WC()->session->set('fp_donation_product', $donation_product);
-                            WC()->session->set('fp_donation_reason_type', $donation_reason_type);
-                            WC()->session->set('fp_donation_reason_to_donate', $donation_reason);
-                            WC()->session->set('fp_donation_person', $donation_for_person);
                             WC()->session->set('fp_donation_amount', $donation_amount);
-                            WC()->session->set('fp_donation_url', $current_page);
                             wp_safe_redirect($woocommerce->cart->get_cart_url());
                             exit;
                         }
                     } else {
-                        if ((is_page() || is_single() || is_shop()) && !is_product() && (!is_checkout())) {
+                        if ((is_page() || is_single()) && !is_product() && (!is_checkout())) {
                             WC()->session->set('fp_donation_product', $donation_product);
-                            WC()->session->set('fp_donation_reason_type', $donation_reason_type);
-                            WC()->session->set('fp_donation_reason_to_donate', $donation_reason);
-                            WC()->session->set('fp_donation_person', $donation_for_person);
                             WC()->session->set('fp_donation_amount', $donation_amount);
-                            WC()->session->set('fp_donation_url', $current_page);
                             wp_safe_redirect($woocommerce->cart->get_cart_url());
                             exit;
                         }
@@ -617,25 +560,17 @@ class FP_DonationSystem_Main_Function {
                 } else {
                     wc_add_notice(get_option('_fp_donation_success_message'), 'success');
                     WC()->session->set('fp_donation_product', $donation_product);
-                    WC()->session->set('fp_donation_reason_type', $donation_reason_type);
-                    WC()->session->set('fp_donation_reason_to_donate', $donation_reason);
-                    WC()->session->set('fp_donation_person', $donation_for_person);
                     WC()->session->set('fp_donation_amount', $donation_amount);
-                    WC()->session->set('fp_donation_url', $current_page);
                     if (get_option('_fp_donation_rewards_apply_type') == '1') {
                         FP_DonationRewards_Cart::main_function_free_add_to_cart($donation_amount);
                     }
-                    if ((is_page() || is_single() || is_shop()) && !is_product() && (!is_checkout())) {
+                    if ((is_page() || is_single()) && !is_product() && (!is_checkout())) {
                         wp_safe_redirect($woocommerce->cart->get_cart_url());
                         exit;
                     }
                 }
                 WC()->session->set('fp_donation_product', $donation_product);
-                WC()->session->set('fp_donation_reason_type', $donation_reason_type);
-                WC()->session->set('fp_donation_reason_to_donate', $donation_reason);
-                WC()->session->set('fp_donation_person', $donation_for_person);
                 WC()->session->set('fp_donation_amount', $donation_amount);
-                WC()->session->set('fp_donation_url', $current_page);
             } else {
                 WC()->session->__unset('fp_donation_currency');
             }
@@ -778,10 +713,6 @@ class FP_DonationSystem_Main_Function {
         $order = new WC_Order($order_id);
         $get_donation_productid = WC()->session->get('fp_donation_product');
         $get_donation_productvalue = WC()->session->get('fp_donation_amount');
-        $get_donation_url = WC()->session->get('fp_donation_url');
-        $donation_reason_type = WC()->session->get('fp_donation_reason_type');
-        $donation_reason = WC()->session->get('fp_donation_reason_to_donate');
-        $donation_for_person = WC()->session->get('fp_donation_person');
 
         // Setted Donation Product ID Automatic
         $get_donation_productid_automatic = WC()->session->get('fp_donation_cart_product_auto');
@@ -789,11 +720,6 @@ class FP_DonationSystem_Main_Function {
 
         update_post_meta($order_id, 'fp_donation_product', $get_donation_productid);
         update_post_meta($order_id, 'fp_donation_value', $get_donation_productvalue);
-        update_post_meta($order_id, 'fp_donation_url', $get_donation_url);
-        update_post_meta($order_id, 'fp_donation_reason_type', $donation_reason_type);
-        update_post_meta($order_id, 'fp_donation_reason_to_donate', $donation_reason);
-        update_post_meta($order_id, 'fp_donation_person', $donation_for_person);
-
 
         // Update Post Meta Order ID
         update_post_meta($order_id, 'fp_donation_product_automatic', $get_donation_productid_automatic);
@@ -811,10 +737,6 @@ class FP_DonationSystem_Main_Function {
         // After successfully saved data just delete that session info
         WC()->session->__unset('fp_donation_product');
         WC()->session->__unset('fp_donation_amount');
-        WC()->session->__unset('fp_donation_url');
-        WC()->session->__unset('fp_donation_reason_type');
-        WC()->session->__unset('fp_donation_reason_to_donate');
-        WC()->session->__unset('fp_donation_person');
 
         WC()->session->__unset('fp_donation_cart_product_auto');
         WC()->session->__unset('fp_donation_cart_amount_auto');
